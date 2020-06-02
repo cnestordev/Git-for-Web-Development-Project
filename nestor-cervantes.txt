@@ -112,16 +112,57 @@
     text-transform: capitalize;
 
     28. How do I add a 1px border around my div that is dotted and black?
-    29. How do I select everything on the page? 
-    30. How do I write a comment in CSS?
-    31. How do I find out what file I am in, when I am using the command line? 
-    32. Using the command line - how do I see a list of files/folders in my current folder?
-    33. How do I remove a file via the command line? Why do I have to be careful with this? 
-    34. Why should I use version control? 
-    35. How often should I commit to github?
-    36. What is the command we would use to push our repo up to github? 
-    37. Walk me through Lambda's git flow. 
+    div {
+        border: 1px dotted black;
+    }
 
+    29. How do I select everything on the page?
+    The wildcard selector, *
+    * {
+        ...
+    }
+
+    30. How do I write a comment in CSS?
+    /* comment goes here */
+
+    31. How do I find out what file I am in, when I am using the command line? 
+    pwd will tell you which folder you are inside of
+
+    32. Using the command line - how do I see a list of files/folders in my current folder?
+    ls to view all visible files and folders
+    ls -a to view all visible and hidden files and folders
+
+    33. How do I remove a file via the command line? Why do I have to be careful with this? 
+    First, be in the same directory/folder in which your file exists, then rm fileName.
+    This should be down with care because the deletion is irreversible.
+
+    34. Why should I use version control?
+    Version control should be used to manage save states for your project.  It's to keep track of the progress you've made,
+    and create save states in the event that you need to revert to an older save.  It allow you to also create a copy of your project,
+    and work on that copy without affecting your original.  It allows for collaboration and being able to "merge" everyone's work into a single
+    file, usually the original one.
+
+    35. How often should I commit to github?
+    Very often, either every 20 minutes or when you make a significant change to your work.
+
+    36. What is the command we would use to push our repo up to github? 
+    git push origin master
+
+    37. Walk me through Lambda's git flow. 
+    1. Fork the repo you're going to be working on.
+    2. Add TL as a collaborator in your forked project under the settings menu.
+    3. clone your repo by typing "git clone <forked GitHub project url>"
+    4. cd into the local project you just downloaded.
+    5. create a new branch by typing: git checkout -b "firstName-lastName"
+    6. Work on project, as needed.
+    7. Once ready to push to Github:
+        a) git add .
+        b) git commit -m "message about what changes you have made since your last commit"
+    8. "Push" your local repo into your GitHub repo.
+        a) git push u origin <name you gave to your local branch>
+    9. Submit a pull request
+    10. Add TL as a reviewer
+    11. Allow the TL to do the merge request.
 Stretch Questions
 
     1. What is the difference between an inline element and a block element?
