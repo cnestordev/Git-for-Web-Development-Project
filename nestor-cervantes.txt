@@ -9,26 +9,25 @@
     blueprint for any website.
 
     3. What is an attribute and where do we put it?
-    An attribute gives additionally information to a tag, such as an image source or a
+    An attribute gives additional information to a tag, such as an image source or a
     clas name or ID.
 
     4. What is the h1 tag used for? How many times should I use it on a page?
     The h1 is used to mark the main header of a website.  It should only be used once.
     
-    5. Name two tags that have required attributes
+    5. Name two tags that have required attributes?
     both img and a tags require attributes (src and href respectively).
 
     6. What do we put in the head of our HTML document? 
-    This is where all the meta data for an HTML document goes.  Tags that link to your
-    external css and javascript files, for example.
+    This is where all the metadata for an HTML document goes.  Tags that link to your
+    external CSS and javascript files, for example.
 
     7. What is an id? 
-    An id is a name that you give an element within it's opening tag that will help
-    identify it.  Unlike a class, each element can only have one unique ID.  The same
+    An id is a name that you give an element within it's opening tag that will help identify it.  Unlike a class, each element can only have one unique ID.  The same
     id name cannot be used for more than one element.
 
     8. What elements can I add an id to? 
-    an ID can be added to any html element.
+    an ID can be added to any HTML element.
 
     9. How many times can I use the same id on a page? 
     An id can only be used once on a page.
@@ -42,7 +41,7 @@
     A class can be added to any HTML element.
 
     12. How many times can I use the same class on a page?
-    There is no limit to the amount of times you can add the same class to any element.
+    There is no limit to the number of times you can add the same class to any element.
     It can be added to as many elements as you'd like.
 
     13. How do I get my link to open in a new tab?
@@ -66,8 +65,8 @@
     to changing the visual structure of the webpage.
 
     18. How to we select an element? Example - every h2 on the page
-    In css, elements are selected either by their tag name, class name, or id name.
-    If you wanted to target every h2 on an html page, you could do so by using the tag name:
+    In CSS, elements are selected either by their tag name, class name, or id name.
+    If you wanted to target every h2 on an HTML page, you could do so by using the tag name:
     h2 {...}
 
     19. What is the difference between a class and an id? - Give me an example of when I might use each one
@@ -77,16 +76,16 @@
     An id is used to target only one HTLM element, and is either used to add a very specific styling to that element or target
     the element in javascript.  In CSS, ids are more specific than classes, so it allows you to override other styles so that you
     can add any specific styling you want to that element.  Perhaps you want one button to be red, you would give that button tag an id,
-    and use css to override the color it inherited and change it to red.
+    and use CSS to override the color it inherited and change it to red.
 
     20. How do we select classes in CSS?
-    Classes are selected using the . followed by the name of the class you're targetting.  Example:  .className
+    Classes are selected using the. followed by the name of the class you're targetting.  Example:  .className
 
     21. How do we select a p element with a single class of “human””?
     p.human will look for all p tags with a class name of "human"
 
     22. What is a parent child selector? When would this be useful? 
-    A paernt child selector will target all child elements that belong to the parent specified.  This would be useful if 
+    A parent child selector will target all child elements that belong to the parent specified.  This would be useful if 
     you had multiple elements that share common selectors throughout your webpage, but only wanted to target the children elements
     of a parent element.
 
@@ -94,7 +93,7 @@
     div.sidebar a 
 
     24. What is a pseudo selector?
-    A pseduo selector will select the matching element only when that element is under a certain state, such as being hovered over,
+    A pseudo selector will select the matching element only when that element is under a certain state, such as being hovered over,
     or being clicked on.
 
     25. What do we use the change the spacing between lines?
@@ -138,7 +137,7 @@
 
     34. Why should I use version control?
     Version control should be used to manage save states for your project.  It's to keep track of the progress you've made,
-    and create save states in the event that you need to revert to an older save.  It allow you to also create a copy of your project,
+    and create save states in the event that you need to revert to an older save.  It allows you to also create a copy of your project,
     and work on that copy without affecting your original.  It allows for collaboration and being able to "merge" everyone's work into a single
     file, usually the original one.
 
@@ -149,24 +148,55 @@
     git push origin master
 
     37. Walk me through Lambda's git flow. 
-    1. Fork the repo you're going to be working on.
-    2. Add TL as a collaborator in your forked project under the settings menu.
-    3. clone your repo by typing "git clone <forked GitHub project url>"
-    4. cd into the local project you just downloaded.
-    5. create a new branch by typing: git checkout -b "firstName-lastName"
-    6. Work on project, as needed.
-    7. Once ready to push to Github:
-        a) git add .
-        b) git commit -m "message about what changes you have made since your last commit"
-    8. "Push" your local repo into your GitHub repo.
-        a) git push u origin <name you gave to your local branch>
-    9. Submit a pull request
-    10. Add TL as a reviewer
-    11. Allow the TL to do the merge request.
+        1. Fork the repo you're going to be working on.
+        2. Add TL as a collaborator in your forked project under the settings menu.
+        3. clone your repo by typing "git clone <forked GitHub project url>"
+        4. cd into the local project you just downloaded.
+        5. create a new branch by typing: git checkout -b "firstName-lastName"
+        6. Work on the project, as needed.
+        7. Once ready to push to Github:
+            a) git add .
+            b) git commit -m "message about what changes you have made since your last commit"
+        8. "Push" your local repo into your GitHub repo.
+            a) git push u origin <name you gave to your local branch>
+        9. Submit a pull request
+        10. Add TL as a reviewer
+        11. Allow the TL to do the merge request.
 Stretch Questions
 
     1. What is the difference between an inline element and a block element?
+    A block element will take up all the space in it's container on the x-axis. The next element that follows it will be
+    placed beneath it.
+    An inline element will only take up the amount of space it needs in the page, and assuming the next element that follows is also an inline
+    element, it will be placed next to it.
+
     2. What happens when an element is positioned absolutely? 
+    It is removed from the flow of the document and will be placed beneath the closest parent element whose position is set to relative.
+    The space that is left behind will be taken up by the next element in the HTML document, as though it was never there.
+    The space that it does take up is outside of the normal flow and will overlap any element that is in that spot.
+
     3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width? 
+    Setting an element to inline-block will prevent the element from taking up the entire horizontal space, allowing any element that follows
+    to sit next to it, assuming that it fits within the container.
+
     4. Name 3 elements that are diplay block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
+        display:block elements
+        1. <div>
+        2. <h1> - </h6>
+        3. <nav>
+
+        display: inline elements
+        1. <span>
+        2. <image>
+
+        display: inline-block elements
+        1. <button>
     5. In your own words, explain the box model. What is the "fix" for the box model, in other words, how do we make all elements respect the width we've given them? 
+    The box model is how all HTML elements are designed to work on a webpage.  Essentially, all HTML elements are boxes that have the content in the center, padding surrounding
+    the content, a border, and a margin that surrounds the outside of the box.  The size of the box can change, but all HTML elements come with their own default values for how
+    big the padding and margins should be.
+
+    Because each browser sets the default values for how large the padding/margin in a box is, we can use the wildcard (*) selector to remove them all at the beginning,
+    allowing us to set our own margin and border to each individual property.  This would make it so that, across all browsers, each element will have the same width, because
+    we have told the browser how much space the box should take up.  Without doing this, it could be hard to determine why boxes are larger than expected, because margins and paddings are 
+    invisible.  But by removing all default values, we can stay consistent across any browser the user might use.
